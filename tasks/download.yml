@@ -6,7 +6,7 @@
   register: download_kibana
   delegate_to: localhost
   until: download_elastic is succeeded
-  when: elastic_install_type == 'remote'
+  when: kibana_install_type == 'remote'
 - name: Copy Kibana
   copy:
     src: "files/kibana-{{ elk_stack_version }}-x86_64.rpm"
