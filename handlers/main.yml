@@ -1,6 +1,7 @@
 ---
-  - name: restart Kibana
-    become: true
-    service:
-      name: kibana
-      state: restarted
+# handlers file for kibana-role
+- name: restart Kibana
+  become: true
+  service:
+    name: kibana
+    state: restarted

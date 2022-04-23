@@ -1,0 +1,12 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include ansible-elasticsearch-role"
+      include_role:
+        name: "ansible-elasticsearch-role"
+    - name: Flush handlers
+      meta: flush_handlers
+    - name: "Include ansible-kibana-role"
+      include_role:
+        name: "ansible-kibana-role"

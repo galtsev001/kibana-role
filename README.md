@@ -1,32 +1,33 @@
 Kibana role
 =========
 
-Роль для установки Kibana
+Роль для установки kibana на хостах с ОС: Debian, Ubuntu, CentOS, RHEL.
 
 Requirements
 ------------
 
-Поддреживаются ОС Linux семейств Debian и RHEL.
+Поддерживаются только ОС семейств debian и EL.
 
 Role Variables
 --------------
 
-| Variable name       | Default  | Description  
-|---------------------|----------|-------------------------  
-| kibana_version      | "7.14.0" | Параметр, определяющий устанавливаемую версию Kibana  
-| kibana_install_type | "remote" | Параметр, определяющий способ получения дистрибутива - удаленно или из локального файла. Возможные значения: "remote", "local"  
+| Variable name  | Default  | Description |
+|----------------|----------|-------------------------|
+| kibana_version | "7.15.0" | Параметр, который определяет какой версии kibana будет установлен |
 
 Example Playbook
 ----------------
 
-Example Playbook
-----------------
-
-	- hosts: all
-	  roles:
-		 - { role: kibana-role }
+    - hosts: all
+      roles:
+         - { role: kibana-role }
 
 License
 -------
 
-MIT
+BSD
+
+Author Information
+------------------
+
+An optional section for the role authors to include contact information, or a website (HTML is not allowed).
